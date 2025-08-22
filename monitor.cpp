@@ -15,21 +15,21 @@ void sleep() {
   cout << "\r  \r" << flush;
 }
 
+in messagereturn(const char* message) {
+    cout << message << "\n";
+    sleep();
+    return 0;
+}
+
 int vitalsOk(float temperature, float pulseRate, float spo2) {
   if (temperature > 102 || temperature < 95) {
-    cout << "Temperature is critical!\n";
-    sleep();
-    return 0;
+   return messagereturn(Temperature is critical!");
   }
   if (pulseRate < 60 || pulseRate > 100) {
-    cout << "Pulse Rate is out of range!\n";
-    sleep();
-    return 0;
+   return messagereturn("Pulse Rate is out of range!");
   }
   if (spo2 < 90) {
-    cout << "Oxygen Saturation out of range!\n";
-    sleep();
-    return 0;
+   return messagereturn("Oxygen Saturation out of range!");
   }
   return 1;
 }
