@@ -1,8 +1,6 @@
 #include <gtest/gtest.h>
 #include "./monitor.h"
 
-#include <gtest/gtest.h>
-
 // vitalsOk is declared in monitor.h
 int vitalsOk(float temperature, float pulseRate, float spo2);
 
@@ -23,4 +21,5 @@ TEST3(Monitor, ReturnsFalseIfSpO2IsOutOfRange) {
 TEST4(Monitor, ReturnsTrueIfAllVitalsAreInRange) {
     ASSERT_TRUE(vitalsOk(98.6f, 80, 98)); //Should be true when all vitals are normal
 }
+
 
