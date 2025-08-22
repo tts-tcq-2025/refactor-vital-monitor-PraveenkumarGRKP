@@ -15,7 +15,7 @@ void sleep() {
   cout << "\r  \r" << flush;
 }
 
-in messagereturn(const char* message) {
+int messagereturn(const char* message) {
     cout << message << "\n";
     sleep();
     return 0;
